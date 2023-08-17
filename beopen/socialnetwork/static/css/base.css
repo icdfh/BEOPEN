@@ -1,0 +1,348 @@
+/* Стили для навигационного меню */
+body {
+    background-color: #0B0A0A;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+html{
+    overflow:  hidden;
+}
+h2{
+    font-size: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+  /* Цвет при наведении */
+  color: #0000C8;
+}
+
+p{
+    color: #898989;
+}
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 90px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 560px;
+    position: relative; /* Добавляем позиционирование */
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: #414141;
+    color: white;
+    font-size: 20px;
+    width: 300px; /* Добавляем ширину */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: white;
+    padding: 20px;
+}
+
+.search-icon {
+    position: absolute; /* Позиционируем значок поиска */
+    right: 10px;
+    cursor: pointer;
+
+}
+.search-button {
+    background-color: #414141;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+      position: absolute; /* Добавляем абсолютное позиционирование */
+    right: 10px; /* Позиция кнопки справа внутри input */
+    font-size: 22px;
+    color: white;
+}
+
+.search-button:hover {
+    background-color: #0000C8;
+}
+.notification-icon {
+    margin-right: 90px; /* Отступ справа */
+    background-color: #0B0A0A;
+    color: white;
+    font-size: 24px;
+}
+.fas fa-bell{
+     background-color: #0B0A0A;
+    color: white;
+}
+
+.language {
+    margin-right: 55px; /* Отступ справа */
+}
+
+.profile-page {
+    margin-right: 10px; /* Отступ справа */
+}
+.left-chapter-1{
+    margin-left: 20px;
+	padding:10px;
+    position: absolute;
+    bottom: 650px;
+}
+.left-chapter-2{
+	margin-left: 20px;
+	position: absolute;
+    bottom: 400px;
+    left: 14px;
+}
+.left-chapter-3{
+	margin-left: 20px;
+	padding:10px;
+    position: absolute;
+    bottom: 175px;
+}
+.left-chapter-4{
+	margin-left: 22px;
+	padding:10px;
+    position: absolute;
+    bottom: 45px;
+}
+#work{
+	margin-right:20px
+}
+.profile-chapter {
+    background: linear-gradient(45deg, #000000, rgba(42, 42, 42, 0.8));
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 1px; /* Подстройте это значение для определения точной позиции */
+    left: 240px; /* Подстройте это значение для определения точной позиции */
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    bottom: 0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 29px;
+    top: 20px
+}
+
+.profile-header h2 {
+    font-size: 20px;
+}
+
+.btn-edit {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-edit:hover{
+    background-color: #0000C8;
+}
+.profile-dates h2 {
+    margin-top: 20px;
+}
+.profile-dates{
+
+    text-align: center;
+}
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 70%; /* Задаем радиус половины высоты (или ширины) */
+    background-color: #0032b2; /* Цвет фона аватарки */
+    margin-left: 10px;
+}
+
+.fpm h2 {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+
+.REP table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #0B0A0A;
+    border-radius: 15px;
+}
+
+.REP td {
+    padding: 10px;
+    border-bottom: 1px solid rgb(80, 80, 80);
+
+}
+
+.REP td p {
+    color: #898989;
+    font-size: 15px;
+}
+
+.REP td h2 {
+    margin: 0;
+    font-size: 20px;
+}
+.table-wrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+.table-wrapper td h2{
+     margin-right: 70px;
+}
+.content-chapter{
+
+    left: 700px;
+    bottom: 200px;
+}
+/* Добавляем стили для интерфейса переписки */
+.massage-table {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 1180px;
+    overflow: hidden;
+    margin-left: 700px;
+    height: calc(100vh - 250px);
+    display: flex; /* Добавляем flex-контейнер */
+    flex-direction: column; /* Ориентация столбцом */
+    justify-content: flex-end; /* Размещаем содержимое снизу */
+}
+
+.message {
+
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+       height: calc(100vh - 250px);
+}
+
+.message-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #818181;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 17px;
+}
+
+.message-input button {
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.message-input button:hover {
+    background-color: #0000C8;
+}
+.add{
+    margin-right: 10px;
+    background-color: #0B0A0A;
+    font-size: 20px;
+     color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+.send{
+    background-color: #0fdc0f;
+    font-size: 20px;
+}
+.voice{
+    background-color: #0000C8;
+      font-size: 20px;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
+}
+.massage-profile {
+    margin-right: 20px;
+}
+
+
+.message-profile h3{
+    position: absolute;
+    left: 0;
+}
+
+.call {
+    background-color: #000000;
+    color: white;
+    position: absolute;
+    top: 170px;
+    right: 35px;
+    font-size: 20px;
+
+}
+.profile-photo{
+    position: absolute;
+    top:160px;
+    width: 45px;
+    height: 40px;
+    border-radius: 20px;
+}
+.profile-name{
+     position: absolute;
+    top:150px;
+    left:770px
+}
+.status{
+    position: absolute;
+     top:150px;
+     left:1265px
+}
+.profile-hr{
+    margin-bottom: 533px;
+    width: 1180px;
+
+}
+
+
+

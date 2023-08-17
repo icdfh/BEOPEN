@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block styles %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+<div class="content-chapter">
+    <div class="massage-table">
+        <div class="massage-profile">
+           <img class="profile-photo" src="https://static2.tgstat.ru/channels/_0/c8/c8fcdb7e4656ff95aa29067c6ce4dc85.jpg">
+            <h2 class="profile-name">Ogk</h2>
+            <h3 class="status">Online</h3>
+            <div class="call">
+            <i class='fas fa-phone'></i>
+                </div>
+            <hr class="profile-hr">
+        </div>
+        <div class="massage">
+            <h2>2222222</h2>
+            <hr>
+        <div class="message-input">
+            <button class="add">+</button>
+        <input type="text" placeholder="Type your message...">
+            <button class="voice"><i class='fas fa-microphone'></i></button>
+             <button class="send"><i class='fas fa-arrow-right'></i></button>
+    </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock styles %}
+{% endblock %}

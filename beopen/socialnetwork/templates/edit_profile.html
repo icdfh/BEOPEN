@@ -1,0 +1,8 @@
+<h2>Edit Profile</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="text" name="first_name" value="{{ form.first_name.value }}">
+   <input type="text" name="last_name" value="{{ form.last_name.value }}">
+    <button type="submit">Save Changes</button>
+</form>

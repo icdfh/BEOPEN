@@ -1,0 +1,78 @@
+/* Стили для страницы регистрации */
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:white;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+form button {
+    background-color: #4ae54a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+      margin-left: 272px;
+}
+#id_role{
+    margin-left: 290px;
+    font-size: 20px;
+}
+label #role-id{
+    margin-left: 290px;
+}
+h1{
+    color: white;
+    margin-right: 9000px;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-login {
+    background-color: #0089ff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.register-log{
+    margin-left: 200px;
+}
