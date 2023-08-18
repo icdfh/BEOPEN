@@ -1,8 +1,13 @@
-<h2>Edit Profile</h2>
-<form method="post" enctype="multipart/form-data">
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <form method="post" enctype="multipart/form-data" class="edit-profile-form">
+    <h2 class="edit-profile-title">Edit Profile</h2>
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="text" name="first_name" value="{{ form.first_name.value }}">
-   <input type="text" name="last_name" value="{{ form.last_name.value }}">
-    <button type="submit">Save Changes</button>
-</form>
+    <input type="text" name="first_name" value="{{ form.first_name.value }}" class="edit-profile-input">
+    <input type="text" name="last_name" value="{{ form.last_name.value }}" class="edit-profile-input">
+    <button type="submit" class="edit-profile-button">Save Changes</button>
+  </form>
+{% endblock %}

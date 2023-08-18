@@ -102,6 +102,7 @@ p{
 
 .profile-page {
     margin-right: 10px; /* Отступ справа */
+
 }
 .left-chapter-1{
     margin-left: 20px;
@@ -126,6 +127,7 @@ p{
 	padding:10px;
     position: absolute;
     bottom: 45px;
+    font-size: 23px;
 }
 #work{
 	margin-right:20px
@@ -224,7 +226,6 @@ p{
      margin-right: 70px;
 }
 .content-chapter{
-
     left: 700px;
     bottom: 200px;
 }
@@ -241,12 +242,10 @@ p{
     justify-content: flex-end; /* Размещаем содержимое снизу */
 }
 
-.message {
+.message-p {
+color: white;
 
-    padding: 5px 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-       height: calc(100vh - 250px);
+
 }
 
 .message-input {
@@ -343,6 +342,190 @@ hr {
     width: 1180px;
 
 }
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 
 
+.form {
+  background: black;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 600px;
+  margin-left: 1000px;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #0032b2;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
 
+.title{
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+ margin-left: 20px;
+}
+
+.pageTitle{
+  font-size: 2em;
+  font-weight: bold;
+}
+.secondaryTitle{
+  color: grey;
+}
+
+.name {
+  background-color: #ebebeb;
+
+}
+.name:hover {
+  border-bottom: 5px solid #0032b2;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid #0032b2;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid #0032b2;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #0032b2;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+}
+.contact-form{
+    margin-left: 1000px;
+}
+.user-list{
+    margin-left: 740px;
+}
+/* Уникальные классы для этой страницы */
+.edit-profile-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-profile-form {
+  max-width: 500px;
+  margin-left: 690px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.edit-profile-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+    margin-left: 40px;
+    font-size: 13px;
+}
+
+.edit-profile-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-profile-button:hover {
+  background-color: #0056b3;
+}
+#id_first_name{
+    font-size: 18px;
+   margin-left: 37px;
+}
+#id_last_name{
+    font-size: 18px;
+     margin-left: 37px;
+}
+#id_profile_email{
+    font-size: 18px;
+     margin-left: 25px;
+}
+#id_phone_number{
+    font-size: 18px;
+     margin-left: 8px;
+}
+#id_avatar{
+    font-size: 18px;
+    margin-left: 55px;
+   border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#avatar-clear_id{
+    font-size: 50px;
+}

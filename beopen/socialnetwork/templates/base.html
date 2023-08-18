@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="nav">
-    <h1 class="logo">BEOPEN</h1>
+   <a href="{% url 'base' %}"><h1 class="logo">BEOPEN</h1></a>
     {% block mainmenu %}
     <div class="profile-chapter">
         <div class="profile-header">
@@ -33,13 +33,13 @@
                     <td><h2>{{ user_profile.user.role }}</h2></td>
                 </tr>
                 <tr>
-                    <td><p>Email address</p></td>
-                    <td><h2>{{ user_profile.user.email }}</h2></td>
-                </tr>
-                <tr>
-                    <td><p>Phone number</p></td>
-                    <td><h2>87777777</h2></td>
-                </tr>
+    <td><p>Email address</p></td>
+    <td><h2>{{ user_profile.profile_email }}</h2></td>
+</tr>
+               <tr>
+    <td><p>Phone number</p></td>
+    <td><h2>{{ user_profile.phone_number }}</h2></td>
+</tr>
             </table>
             <div class="table-wrapper">
                 <table>
@@ -64,7 +64,11 @@
         <h2>EN</h2>
     </div>
     <div class="profile-page">
-        <h2>Profile Page</h2>
+          {% if user_profile.avatar %}
+                <img src="{{ user_profile.avatar.url }}" alt="Avatar" class="avatar" style="width: 55px;height: 55px">
+            {% else %}
+                <img src="{% static 'путь_к_изображению_по_умолчанию.png' %}" alt="Default Avatar" class="avatar" style="width: 55px;height: 55px">
+            {% endif %}
     </div>
     {% endblock mainmenu %}
 </div>
@@ -72,14 +76,14 @@
 <div class="left-chapter-1">
     <p>Site</p>
     <a href="{% url 'home' %}"> <h2>Home</h2></a>
-    <a href="#"> <h2>Contact</h2></a>
-    <a href="#"> <h2>About</h2></a>
+    <a href="{% url 'contact' %}"> <h2>Contact</h2></a>
+    <a href="{% url 'about' %}"> <h2>About</h2></a>
 </div>
 <div class="left-chapter-2">
     <p id="work">Work</p>
     <a href="#"> <h2>News</h2></a>
     <a href="#"> <h2>Posts</h2></a>
-    <a href="#"> <h2>Friends</h2></a>
+    <a href="{% url 'friends' %}"> <h2>Friends</h2></a>
     <a href="#"> <h2>Video</h2></a>
 </div>
 <div class="left-chapter-3">
@@ -89,7 +93,7 @@
     <a href="#"> <h2>Subscribe</h2></a>
 </div>
 <div class="left-chapter-4">
-    <h2>Logout</h2>
+    <a href="{% url 'logout' %}">Logout</a>
 </div>
 
 	<div class="content-chapter">
