@@ -12,6 +12,7 @@
 <div class="nav">
    <a href="{% url 'base' %}"><h1 class="logo">BEOPEN</h1></a>
     {% block mainmenu %}
+
     <div class="profile-chapter">
         <div class="profile-header">
             <h2>Profile</h2>
@@ -51,12 +52,14 @@
             </div>
         </div>
     </div>
-    <div class="search-bar">
-        <input type="text" placeholder="Search anything...">
-        <button class="search-button">
+   <div class="search-bar">
+    <form action="{% url 'search_results' %}" method="GET">
+        <input type="text" name="q" placeholder="Search anything..." style="font-size: 18px;">
+        <button class="search-button" type="submit">
             <i class="fas fa-search"></i>
         </button>
-    </div>
+    </form>
+</div>
     <div class="notification-icon">
         <i class='fas fa-bell'></i>
     </div>
@@ -81,15 +84,15 @@
 </div>
 <div class="left-chapter-2">
     <p id="work">Work</p>
-    <a href="#"> <h2>News</h2></a>
-    <a href="#"> <h2>Posts</h2></a>
+    <a href="{% url 'news' %}"> <h2>News</h2></a>
+    <a href="{% url 'posts' %}"> <h2>Posts</h2></a>
     <a href="{% url 'friends' %}"> <h2>Friends</h2></a>
-    <a href="#"> <h2>Video</h2></a>
+    <a href="{% url 'video' %}"> <h2>Video</h2></a>
 </div>
 <div class="left-chapter-3">
     <p>Feedback</p>
     <a href="#"> <h2>Settings</h2></a>
-    <a href="#"> <h2>Help</h2></a>
+    <a href="{% url 'chat_with_gpt' %}"><h2>Help</h2></a>
     <a href="#"> <h2>Subscribe</h2></a>
 </div>
 <div class="left-chapter-4">

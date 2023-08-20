@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .models import CustomUser, UserProfile, Message
+from .models import CustomUser, UserProfile, Message, Post, Video
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -33,3 +33,17 @@ class MessageForm(forms.ModelForm):
     class Meta:
         model = Message
         fields = ['text', 'media']
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'image']
+
+class VideoForm(forms.ModelForm):
+    class Meta:
+        model = Video
+        fields = ['video_url']
+
+
+class ChatForm(forms.Form):
+    user_message = forms.CharField(label='Ask a question:', max_length=255)

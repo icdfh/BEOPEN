@@ -1,4 +1,5 @@
 import os
+from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -16,7 +17,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'socialnetwork',
+    'haystack',
 ]
+
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'), # Укажите путь к папке для индексов
+    },
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -27,6 +38,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('kz', _('Kazakh')),
+]
+LANGUAGE_CODE = 'en'
+
+USE_I18N = True
+USE_L10N = True
 
 ROOT_URLCONF = 'beopen.urls'
 
@@ -54,6 +76,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+OPENAI_API_KEY = 'your_api_key_here'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -86,3 +110,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Измените настройку AUTH_USER_MODEL на имя вашего приложения и модели
 AUTH_USER_MODEL = 'socialnetwork.CustomUser'
+
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
